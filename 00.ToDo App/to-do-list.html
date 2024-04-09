@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>ToDo App</title>
+  </head>
+  <body>
+    <header>
+      <svg viewBox="0 0 960 250">
+        <symbol id="s-text">
+          <text text-anchor="middle" x="50%" y="80%">ToDo App</text>
+          <text text-anchor="middle" x="52%" y="80%">ToDo App</text>
+        </symbol>
+
+        <g class="g-ants">
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+      </svg>
+    </header>
+
+    <section class="container">
+      <div class="form-container">
+        <form class="todo-form">
+          <input type="text" class="todo-input" />
+          <button class="add-todo" type="submit">
+            <i class="fas fa-plus-circle"></i>
+          </button>
+        </form>
+        <div class="select">
+          <select class="filter-todos" name="todos">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
+      </div>
+      <div class="todo-container">
+        <ul class="todolist">
+          <!--   <li class="todo">
+            <p class="todo__title">todo #1</p>
+            <span class="todo__createdAt">1402/1/28</span>
+            <button class = 'todo__check'><i class="far fa-check-square"></i></button>
+            <button class = "todo__remove"><i class="far fa-trash-alt"></i></button>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

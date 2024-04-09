@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "Vazir-Bold";
+  src: url(/Assets/fonts/Vazir-Bold.woff) format(woff);
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Vazir";
+  src: url(/Assets/fonts/Vazir.woff) format(woff);
+  font-style: normal;
+  font-weight: 500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Vazir-Bold";
+  list-style: none;
+}
+
+/*  VARIABLES : */
+:root {
+  --primaryColor: #6d28d9;
+  --secondaryColor: #ede9fe;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #7c7c7c;
+  --secondayGrey: #ccc;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+  --mainRed: #db2777;
+  --bodyColor: #f6f6f6;
+}
+
+body {
+  font-family: "Vazir-Bold";
+  color: var(--mainBlack);
+  background-color: var(--bodyColor);
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: linear-gradient(
+    180deg,
+    rgba(34, 193, 195, 0.258140756302521) 0%,
+    rgba(253, 187, 45, 0.4) 100%
+  );
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+svg {
+  display: block;
+  font: 10.5em "Montserrat";
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+  stroke: #4d163d;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+  stroke: #840037;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+  stroke: #bd0034;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+  stroke: #bd0034;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+  stroke: #fdb731;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.form-container {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.todo-container {
+  margin-top: 1rem;
+  width: 20rem;
+}
+
+form {
+  width: 30rem;
+  background-color: var(--mainWhite);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--secondayGrey);
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+}
+
+form input {
+  flex: 1;
+  font-weight: bold;
+}
+
+form input:hover,
+form input:focus {
+  background: linear-gradient(
+    180deg,
+    rgba(34, 192, 195, 0.1) 0%,
+    rgba(253, 187, 45, 0.1) 100%
+  );
+}
+
+form input,
+form button {
+  border: none;
+  outline: none;
+  background-color: none;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+form button {
+  color: var(--primaryColor);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+}
+
+select {
+  appearance: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  color: var(--primaryColor);
+  position: relative;
+  background-color: transparent;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+}
+select:hover {
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(34, 192, 195, 0.1) 0%,
+    rgba(253, 187, 45, 0.1) 100%
+  );
+}
+.select {
+  margin-left: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+  width: 8.5rem;
+  position: relative;
+  border: 2px solid var(--secondayGrey);
+  font-weight: bold;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 15%;
+  right: 0;
+  padding: 0.5rem;
+
+  color: var(--primaryColor);
+  pointer-events: none;
+}
+
+.todolist {
+  width: 30rem;
+}
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff9b;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.todo .todo__title {
+  color: var(--primaryColor);
+  font-weight: bold;
+  flex: 1;
+}
+
+.todo button {
+  display: block;
+  font-size: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.fa-trash-alt {
+  color: var(--mainRed);
+}
+.fa-check-square {
+  color: var(--primaryColor);
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+button > i {
+  pointer-events: none;
+}
